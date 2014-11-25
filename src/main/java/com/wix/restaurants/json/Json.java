@@ -19,9 +19,27 @@ public class Json {
 		}
 	}
 	
+	public static <T> T parse(byte[] json, Class<T> valueType) {
+		try {
+			return mapper.readValue(json, valueType);
+		} catch (IOException e) {
+			LoggerFactory.getLogger(Json.class).error("JSON deserialization error.", e);
+			throw new RuntimeException(e);
+		}
+	}	
+	
 	public static <T> T parse(String json, TypeReference<T> typeReference) {
 		try {
 			return mapper.readValue(json, typeReference);
+		} catch (IOException e) {
+			LoggerFactory.getLogger(Json.class).error("JSON deserialization error.", e);
+			throw new RuntimeException(e);
+		}
+	}
+	
+	public static <T> T parse(String json, Class<T> valueType) {
+		try {
+			return mapper.readValue(json, valueType);
 		} catch (IOException e) {
 			LoggerFactory.getLogger(Json.class).error("JSON deserialization error.", e);
 			throw new RuntimeException(e);
