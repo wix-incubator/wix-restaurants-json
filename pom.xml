@@ -4,7 +4,7 @@
 
     <groupId>com.wix.restaurants</groupId>
     <artifactId>wix-restaurants-json</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Wix Restaurants JSON Utilities</name>
     <description>Wix Restaurants JSON Utilities</description>
