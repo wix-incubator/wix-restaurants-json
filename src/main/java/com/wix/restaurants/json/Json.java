@@ -1,14 +1,17 @@
 package com.wix.restaurants.json;
 
-import java.io.IOException;
-
-import org.slf4j.LoggerFactory;
-
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.module.scala.DefaultScalaModule;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
 
 public class Json {
 	public static final ObjectMapper mapper = new ObjectMapper();
+    static {
+        mapper.registerModule(new DefaultScalaModule());
+    }
 	
 	public static <T> T parse(byte[] json, TypeReference<T> typeReference) {
 		try {

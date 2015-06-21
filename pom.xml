@@ -57,7 +57,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		
-		<com.fasterxml.jackson.version>2.5.3</com.fasterxml.jackson.version>
+		<com.fasterxml.jackson.version>2.5.2</com.fasterxml.jackson.version>
 		<org.slf4j.version>1.7.12</org.slf4j.version>
 		<junit.version>4.12</junit.version>
     </properties>
@@ -155,6 +155,11 @@
 		    <artifactId>jackson-databind</artifactId>
     		<version>${com.fasterxml.jackson.version}</version>
 	    </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-scala_2.11</artifactId>
+            <version>${com.fasterxml.jackson.version}</version>
+        </dependency>
     	<dependency>
 	    	<groupId>org.slf4j</groupId>
 		    <artifactId>slf4j-api</artifactId>
