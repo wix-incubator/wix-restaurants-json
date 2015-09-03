@@ -13,13 +13,16 @@ public class JsonTest {
 		public ComplexJavaObject object;
 	}
 
+    private static class ComplexJavaObjectWithExtraField extends ComplexJavaObject {
+        public String extraString;
+    }
+
 	private static class ComplexScalaObject {
 		public String string;
 		public Integer integer;
 		public Option<ComplexScalaObject> object;
 	}
 
-	
 	@Test
 	public void testComplexJavaObjectJson() throws Exception {
 		final ComplexJavaObject obj = new ComplexJavaObject();
@@ -38,6 +41,17 @@ public class JsonTest {
 		assertEquals(obj.object.integer, newObj.object.integer);
 		assertEquals(obj.object.object, newObj.object.object);
 	}
+
+    @Test
+    public void testComplexJavaObjectJsonWithExtraFields() throws Exception {
+        final ComplexJavaObjectWithExtraField obj = new ComplexJavaObjectWithExtraField();
+        obj.extraString = "extra string";
+
+        final String json = Json.stringify(obj);
+
+        // This shouldn't throw
+        Json.parse(json, new TypeReference<ComplexJavaObject>() {});
+    }
 
     @Test
     public void testComplexScalaObjectJson() throws Exception {
