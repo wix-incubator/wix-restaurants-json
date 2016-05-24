@@ -4,7 +4,7 @@
 
     <groupId>com.wix.restaurants</groupId>
     <artifactId>wix-restaurants-json</artifactId>
-    <version>1.5.0</version>
+    <version>1.6.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Wix Restaurants JSON Utilities</name>
     <description>Wix Restaurants JSON Utilities</description>
@@ -48,7 +48,7 @@
 		<url>https://github.com/wix/wix-restaurants-json</url>
 		<connection>scm:git:git://github.com/wix/wix-restaurants-json.git</connection>
 		<developerConnection>scm:git:git@github.com:wix/wix-restaurants-json.git</developerConnection>
-	  <tag>1.5.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<issueManagement>
