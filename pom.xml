@@ -13,8 +13,8 @@
 
 	<parent>
 		<groupId>com.wix</groupId>
-		<artifactId>wix-oss-parent</artifactId>
-		<version>1.2.0</version>
+		<artifactId>wix-oss-scala-parent</artifactId>
+		<version>0.47.0</version>
 		<relativePath />
 	</parent>
 
@@ -91,7 +91,7 @@
 	    </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-scala_2.11</artifactId>
+            <artifactId>jackson-module-scala_${scala.dependencies.version}</artifactId>
             <version>${com.fasterxml.jackson.version}</version>
         </dependency>
     	<dependency>
